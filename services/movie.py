@@ -1,5 +1,4 @@
 from typing import Optional, List
-from datetime import datetime
 from django.db.models import QuerySet
 from db.models import Movie
 
@@ -31,8 +30,8 @@ def create_movie(
     movie_description: str,
     genres_ids: Optional[List[int]] = None,
     actors_ids: Optional[List[int]] = None,
-    movie_show_time: Optional[datetime] = None,
 ) -> Movie:
+
     movie = Movie.objects.create(
         title=movie_title,
         description=movie_description,
